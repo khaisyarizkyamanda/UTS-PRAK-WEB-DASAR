@@ -667,12 +667,6 @@ a {
   color: var(--text-light);
 }
 
-.form-grid {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 20px;
-}
-
 .form-row {
   margin-top: 20px;
   display: grid;
@@ -751,8 +745,8 @@ a {
 }
 
 .radio-group {
-  display: flex;
-  flex-wrap: wrap;
+  flex-direction: column;
+  align-items: flex-start;
   gap: 14px;
   padding-top: 10px;
 }
@@ -909,18 +903,27 @@ a {
 .delay-2 { transition-delay: 0.24s; }
 .delay-3 { transition-delay: 0.36s; }
 
-@media (max-width: 1080px) {
-  .hero-grid,
-  .form-row,
-  .bottom-row,
+@media (max-width: 780px) {
+
   .collection-grid,
-  .category-grid,
-  .product-grid {
-    grid-template-columns: repeat(2, 1fr);
+  .category-grid {
+    grid-template-columns: 1fr;
   }
 
-  .form-grid {
-    grid-template-columns: repeat(2, 1fr);
+  .form-grid,
+  .form-row,
+  .bottom-row {
+    grid-template-columns: 1fr;
+  }
+
+  .product-grid {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .footer-content {
+    flex-direction: column;
   }
 
   .bottom-row {
@@ -931,98 +934,40 @@ a {
     grid-template-columns: 1fr;
   }
 
-  .product-grid {
-    grid-template-columns: repeat(2, 1fr);
-  }
 }
 
-@media (max-width: 780px) {
-  .container {
-    width: min(100% - 24px, 1180px);
-  }
-
-  .menu-btn {
-    display: inline-flex;
-  }
-
-  .nav {
-    display: none;
-    width: 100%;
-    flex-direction: column;
-    gap: 14px;
-    padding-top: 10px;
-  }
-
-  .nav.open {
-    display: flex;
-  }
-
-  .nav-container {
-    flex-wrap: wrap;
-    padding: 12px 0;
-  }
-
-  .hero-section,
-  .collections-section,
-  .categories-section,
-  .products-section,
-  .order-section {
-    padding: 88px 0;
-  }
-
-  .hero-content h1 {
-    font-size: 3.1rem;
-  }
-
-  .section-head h2 {
-    font-size: 2.8rem;
-  }
-
-  .collection-grid,
-  .category-grid,
-  .product-grid,
-  .form-grid,
-  .form-row,
-  .footer-content {
-    grid-template-columns: 1fr;
-  }
-
-  .hero-mini-cards {
-    flex-direction: column;
-  }
-
-  .mini-card {
-    width: 100%;
-  }
-
-  .form-actions {
-    flex-direction: column;
-  }
-
-  .form-actions .btn {
-    width: 100%;
-  }
-
-  .order-box {
-    padding: 20px;
-  }
-}
 
 @media (max-width: 768px) {
+
   .form-grid {
-    grid-template-columns: 1fr;
+    grid-template-columns: 1fr !important;
   }
 
   .form-row {
-    grid-template-columns: 1fr;
+    grid-template-columns: 1fr !important;
   }
 
   .bottom-row {
-    grid-template-columns: 1fr;
+    grid-template-columns: 1fr !important;
   }
 
   .radio-group {
-    flex-direction: column;
+    display: flex;
+    flex-direction: column !important;
+    align-items: flex-start;
+    gap: 12px;
+  }
+
+  .radio-group label {
+    display: flex;
+    align-items: center;
     gap: 10px;
   }
+
+  .form-group input,
+  .form-group select,
+  .form-group textarea {
+    width: 100%;
+  }
+
 }
