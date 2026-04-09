@@ -68,7 +68,7 @@ a {
 }
 
 .container {
-  width: min(1180px, calc(100% - 40px));
+  width: min(1180px, calc(100% - 24px));
   margin: 0 auto;
 }
 
@@ -858,8 +858,12 @@ a {
     width: 100%;  
     max-width: 100%;
   }
-}
 
+  .hero-grid {
+    grid-template-columns: 1fr; 
+
+}
+}
 .product-card {
   margin: 0 auto;
 }
@@ -970,4 +974,8 @@ a {
     width: 100%;
   }
 
+}
+
+html, body {
+  overflow-x: hidden;
 }
