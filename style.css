@@ -455,8 +455,7 @@ a {
 
 .category-grid {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 20px;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
 }
 
 .category-box {
@@ -906,13 +905,15 @@ a {
 
 @media (max-width: 768px) {
 
-  .collection-grid {
-    grid-template-columns: 1fr;
-  }
+.collection-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+}
 
-  .category-grid {
-    grid-template-columns: 1fr;
-  }
+.category-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+}
 
 }
 
@@ -954,4 +955,9 @@ a {
 
 html, body {
   overflow-x: hidden;
+}
+
+.collection-grid,
+.category-grid {
+  overflow: hidden;
 }
