@@ -904,6 +904,18 @@ a {
 .delay-2 { transition-delay: 0.24s; }
 .delay-3 { transition-delay: 0.36s; }
 
+@media (max-width: 768px) {
+
+  .collection-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .category-grid {
+    grid-template-columns: 1fr;
+  }
+
+}
+
 
 @media (max-width: 768px) {
 
