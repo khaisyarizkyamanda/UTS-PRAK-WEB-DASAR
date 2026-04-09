@@ -855,6 +855,21 @@ a {
   }
 }
 
+@media (max-width: 768px) {
+  .product-grid {
+    justify-content: center;
+  }
+
+  .product-card {
+    width: 100%;  
+    max-width: 100%;
+  }
+}
+
+.product-card {
+  margin: 0 auto;
+}
+
 .back-top {
   position: fixed;
   right: 22px;
