@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Key's Atelier</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+  <div class="progress-bar" id="progressBar"></div>
+
+  <header class="site-header">
+    <div class="container nav-container">
+    <div class="brand">
+     <span class="brand-star">✦</span>
+       <h1 class="logo">
+       Key’s <span>Atelier</span>
+       </h1>
+    </div>
+      <nav class="nav" id="navMenu">
+        <a href="#home">Home</a>
+        <a href="#collections">Collections</a>
+        <a href="#categories">Categories</a>
+        <a href="#products">Products</a>
+        <a href="#order">Order</a>
+      </nav>
+
+      <button class="menu-btn" id="menuBtn">☰</button>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero-section" id="home">
+      <div class="hero-overlay"></div>
+      <div class="container hero-grid">
+        <div class="hero-content reveal">
+          <p class="eyebrow">Luxury Fashion Boutique</p>
+          <h1>Refined elegance for the modern feminine wardrobe.</h1>
+          <p class="hero-text">
+            Discover curated fashion pieces crafted for graceful confidence — timeless clothing,
+            sculpted bags, refined footwear, and elegant accessories.
+          </p>
+
+          <div class="hero-actions">
+            <a href="#products" class="btn btn-primary">Explore Now</a>
+            <a href="#order" class="btn btn-outline">Place Order</a>
+          </div>
+
+          <div class="hero-mini-cards">
+            <div class="mini-card glass">
+              <strong>120+</strong>
+              <span>Luxury Pieces</span>
+            </div>
+            <div class="mini-card glass">
+              <strong>4</strong>
+              <span>Main Categories</span>
+            </div>
+            <div class="mini-card glass">
+              <strong>Premium</strong>
+              <span>Boutique Quality</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="hero-side glass reveal delay-1">
+          <p class="small-label">Signature Mood</p>
+          <h2>Soft. Tailored. Elegant.</h2>
+          <p>
+            A luxury boutique experience with refined color tones, premium composition,
+            and subtle editorial styling.
+          </p>
+          <div class="hero-tags">
+            <span>Timeless</span>
+            <span>Luxury</span>
+            <span>Elegant</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="collections-section" id="collections">
+      <div class="container">
+        <div class="section-head reveal">
+          <p class="eyebrow">Featured Collections</p>
+          <h2>Distinct moods, one elegant identity.</h2>
+          <p>
+            Each collection reflects a distinct mood, curated with refined elegance and timeless style.
+          </p>
+        </div>
+
+        <div class="collection-grid">
+          <div class="collection-card collection-a reveal">
+            <div class="collection-info">
+              <p>Soft Tailoring</p>
+              <h3>Clothing</h3>
+            </div>
+          </div>
+
+          <div class="collection-card collection-b reveal delay-1">
+            <div class="collection-info">
+              <p>Structured Luxury</p>
+              <h3>Bags</h3>
+            </div>
+          </div>
+
+          <div class="collection-card collection-c reveal delay-2">
+            <div class="collection-info">
+              <p>Graceful Motion</p>
+              <h3>Footwear</h3>
+            </div>
+          </div>
+          <div class="collection-card collection-d reveal delay-3">
+            <div class="collection-info">
+              <p>Refined Details</p>
+              <h3>Accessories</h3>
+  </div>
+</div>
+        </div>
+      </div>
+    </section>
+
+    <section class="categories-section" id="categories">
+      <div class="container">
+        <div class="section-head reveal">
+          <p class="eyebrow">Fashion Categories</p>
+          <h2>Luxury essentials across every category.</h2>
+        </div>
+
+        <div class="category-grid">
+          <div class="category-box reveal">
+            <div class="icon-circle">✦</div>
+            <h3>Clothing</h3>
+            <p>Dresses, blouses, skirts, outerwear, and tailored essentials.</p>
+          </div>
+
+          <div class="category-box reveal delay-1">
+            <div class="icon-circle">◈</div>
+            <h3>Bags</h3>
+            <p>Mini bags, shoulder bags, leather totes, and statement silhouettes.</p>
+          </div>
+
+          <div class="category-box reveal delay-2">
+            <div class="icon-circle">◌</div>
+            <h3>Footwear</h3>
+            <p>Heels, flats, sandals, and elegant styles for refined movement.</p>
+          </div>
+
+          <div class="category-box reveal delay-3">
+            <div class="icon-circle">✧</div>
+            <h3>Accessories</h3>
+            <p>Scarves, belts, jewelry-inspired details, and polished finishing touches.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="products-section" id="products">
+      <div class="container">
+        <div class="section-head reveal">
+          <p class="eyebrow">Boutique Catalogue</p>
+          <h2>Explore our curated luxury products.</h2>
+        </div>
+
+        <div class="toolbar glass reveal">
+          <input type="text" id="searchInput" placeholder="Search products..." />
+
+          <div class="filters">
+            <button class="filter-btn active" data-category="All">All</button>
+            <button class="filter-btn" data-category="Clothing">Clothing</button>
+            <button class="filter-btn" data-category="Bags">Bags</button>
+            <button class="filter-btn" data-category="Footwear">Footwear</button>
+            <button class="filter-btn" data-category="Accessories">Accessories</button>
+          </div>
+        </div>
+
+        <div class="product-grid" id="productGrid"></div>
+      </div>
+    </section>
+
+<section class="order-section" id="order">
+  <div class="container">
+    <div class="section-head light reveal">
+      <p class="eyebrow">Order Form</p>
+      <h2>Complete your fashion order.</h2>
+    </div>
+
+    <div class="order-box glass reveal">
+      <form id="orderForm" novalidate>
+        <div class="form-grid">
+          <div class="form-group">
+            <label for="fullName">Full Name *</label>
+            <input type="text" id="fullName" placeholder="Enter your full name" />
+            <small class="error"></small>
+          </div>
+
+          <div class="form-group">
+            <label for="email">Email Address *</label>
+            <input type="email" id="email" placeholder="Enter your email address" />
+            <small class="error"></small>
+          </div>
+
+          <div class="form-group">
+            <label for="phone">Phone Number *</label>
+            <div class="phone-group">
+              <select id="countryCode">
+                <option value="+62">+62</option>
+                <option value="+60">+60</option>
+                <option value="+65">+65</option>
+                <option value="+1">+1</option>
+                <option value="+44">+44</option>
+                <option value="+81">+81</option>
+                <option value="+82">+82</option>
+              </select>
+              <input type="tel" id="phone" placeholder="Enter your phone number" />
+            </div>
+            <small class="error"></small>
+          </div>
+
+          <div class="form-group password-group">
+            <label for="password">Account Password *</label>
+            <input type="password" id="password" placeholder="Minimum 8 characters" />
+            <button type="button" class="toggle-password" id="togglePassword">Show</button>
+            <small class="error"></small>
+          </div>
+
+          <div class="form-group">
+            <label for="productSelect">Select Product *</label>
+            <select id="productSelect">
+              <option value="">-- Choose a product --</option>
+            </select>
+            <small class="error"></small>
+          </div>
+
+          <div class="form-group">
+            <label for="quantity">Quantity *</label>
+            <input type="number" id="quantity" min="1" value="1" />
+            <small class="error"></small>
+          </div>
+
+          <div class="form-group">
+            <label for="size">Size *</label>
+            <select id="size">
+              <option value="">-- Select size --</option>
+              <option value="XS">XS</option>
+              <option value="S">S</option>
+              <option value="M">M</option>
+              <option value="L">L</option>
+              <option value="XL">XL</option>
+            </select>
+            <small class="error"></small>
+          </div>
+
+          <div class="form-group">
+            <label for="deliveryDate">Preferred Delivery Date *</label>
+            <input type="date" id="deliveryDate" />
+            <small class="error"></small>
+          </div>
+        </div>
+
+        <div class="form-row">
+          <div class="form-group">
+            <label>Payment Method *</label>
+            <div class="radio-group">
+              <label><input type="radio" name="payment" value="Bank Transfer" /> Bank Transfer</label>
+              <label><input type="radio" name="payment" value="Cash on Delivery" /> Cash on Delivery</label>
+              <label><input type="radio" name="payment" value="E-Wallet" /> E-Wallet</label>
+            </div>
+            <small class="error radio-error"></small>
+          </div>
+
+          <div class="form-group">
+            <label for="notes">Style Notes</label>
+            <textarea id="notes" rows="4" placeholder="Add delivery or style notes"></textarea>
+            <small class="error"></small>
+          </div>
+        </div>
+
+        <div class="bottom-row">
+          <div class="terms-wrap">
+            <label class="terms-label">
+              <input type="checkbox" id="terms" />
+              I agree to the terms and conditions *
+            </label>
+            <small class="error terms-error"></small>
+          </div>
+
+          <div class="summary glass" id="summaryBox">
+            <h3>Order Summary</h3>
+            <p>Selected Product: <span id="summaryProduct">-</span></p>
+            <p>Quantity: <span id="summaryQuantity">1</span></p>
+            <p>Total Price: <span id="summaryTotal">Rp0</span></p>
+          </div>
+        </div>
+
+        <div class="form-actions">
+          <button type="reset" class="btn btn-outline">Reset Form</button>
+          <button type="submit" class="btn btn-primary">Confirm Order ✦</button>
+        </div>
+      </form>
+    </div>
+  </div>
+</section>
+  </main>
+
+  <button class="back-top" id="backTop">↑</button>
+
+<footer class="site-footer">
+  <div class="container footer-content">
+
+    <div class="footer-left">
+      <h2 class="footer-logo">
+        ✦ Key’s <span>Atelier</span>
+      </h2>
+      <p class="footer-tagline">
+        Refined fashion for a modern feminine wardrobe.
+      </p>
+    </div>
+
+    <div class="footer-right">
+      <p class="footer-categories">
+        Clothing · Bags · Footwear · Accessories
+      </p>
+      <p class="footer-desc">
+        Designed with elegance, crafted with intention.
+      </p>
+    </div>
+
+  </div>
+</footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
