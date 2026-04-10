@@ -1036,20 +1036,19 @@ a {
 @media (max-width: 768px) {
 
   .manage-form {
-    display: grid !important;
-    grid-template-columns: 1fr !important;
-    gap: 14px;
+    display: flex !important;
+    flex-direction: column !important;
+    gap: 12px;
   }
 
   .manage-form input {
-    width: 100%;
-    min-height: 48px;
-    font-size: 14px;
+    width: 100% !important;
+    height: 48px;
   }
 
-  .manage-form input::placeholder {
-  font-size: 14px;
-}
+  .manage-form button {
+    width: 100%;
+  }
 
 }
 
