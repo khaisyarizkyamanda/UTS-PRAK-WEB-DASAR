@@ -903,6 +903,32 @@ a {
 }
 }
 
+@media (max-width: 768px) {
+
+  .nav {
+    position: absolute;
+    top: 82px;
+    right: 0;
+    width: 100%;
+    background: rgba(255,255,255,0.95);
+    flex-direction: column;
+    align-items: center;
+    gap: 16px;
+    padding: 20px 0;
+
+    display: none; 
+  }
+
+  .nav.open {
+    display: flex;
+  }
+
+  .menu-btn {
+    display: block;
+  }
+
+}
+
 .back-top {
   position: fixed;
   right: 22px;
@@ -1005,8 +1031,24 @@ a {
 
 }
 
+@media (max-width: 768px) {
+
+  .manage-form {
+    grid-template-columns: 1fr;
+  }
+
+  .manage-form button {
+    width: 100%;
+  }
+
+}
+
 html, body {
   overflow-x: hidden;
+}
+
+.manage-box {
+  overflow: hidden;
 }
 
 .collection-grid,
