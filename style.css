@@ -1038,13 +1038,18 @@ a {
   .manage-form {
     display: grid !important;
     grid-template-columns: 1fr !important;
-    gap: 12px;
+    gap: 14px;
   }
 
-  .manage-form input,
-  .manage-form button {
+  .manage-form input {
     width: 100%;
+    min-height: 48px;
+    font-size: 14px;
   }
+
+  .manage-form input::placeholder {
+  font-size: 14px;
+}
 
 }
 
