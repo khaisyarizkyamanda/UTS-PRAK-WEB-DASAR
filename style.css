@@ -637,6 +637,39 @@ a {
   font-weight: 600;
 }
 
+.manage-section {
+  padding: 100px 0;
+  background: linear-gradient(180deg, #fdf9f5, #f3ebe4);
+}
+
+.manage-box {
+  padding: 30px;
+  border-radius: var(--radius-xl);
+}
+
+.manage-form {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 12px;
+}
+
+.manage-form input {
+  padding: 12px;
+  border-radius: 12px;
+  border: 1px solid var(--line-soft);
+  background: rgba(255,255,255,0.7);
+}
+
+.manage-form button {
+  grid-column: span 5;
+}
+
+@media (max-width: 768px) {
+  .manage-form {
+    grid-template-columns: 1fr;
+  }
+}
+
 .order-product-btn {
   padding: 10px 16px;
   border-radius: 999px;

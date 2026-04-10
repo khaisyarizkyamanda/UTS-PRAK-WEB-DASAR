@@ -1,4 +1,4 @@
-const products = [
+let products = [
 {
   id: 1,
   name: "Silk Knit Dress",
@@ -143,9 +143,24 @@ function renderProducts(list) {
         <h3 class="product-name">${item.name}</h3>
         <p class="product-desc">${item.description}</p>
         <div class="product-bottom">
-          <span class="product-price">${formatPrice(item.price)}</span>
-          <button class="order-product-btn" data-name="${item.name}">Order</button>
-        </div>
+  <span class="product-price">${formatPrice(item.price)}</span>
+
+  <div style="display:flex; gap:8px;">
+    <button class="order-product-btn" data-name="${item.name}">Order</button>
+
+    <button onclick="deleteProduct(${item.id})"
+      style="
+        background:#5e2d35;
+        color:white;
+        border:none;
+        padding:8px 10px;
+        border-radius:999px;
+        cursor:pointer;
+      ">
+      ✕
+    </button>
+  </div>
+</div>
       </div>
     `;
     productGrid.appendChild(card);
@@ -376,6 +391,37 @@ function setupReveal() {
   }, { threshold: 0.15 });
 
   elements.forEach((el) => observer.observe(el));
+}
+
+function addProduct() {
+  const name = document.getElementById("newName").value;
+  const price = document.getElementById("newPrice").value;
+  const category = document.getElementById("newCategory").value;
+
+  if (!name || !price || !category) {
+    alert("Isi semua field!");
+    return;
+  }
+
+  const newItem = {
+    id: Date.now(),
+    name,
+    category,
+    price: Number(price),
+    badge: "New",
+    image,
+    description: "New product"
+  };
+
+  products.push(newItem);
+  renderProducts(products);
+  fillProductSelect();
+}
+
+function deleteProduct(id) {
+  products = products.filter(item => item.id !== id);
+  renderProducts(products);
+  fillProductSelect();
 }
 
 menuBtn.addEventListener("click", () => {
