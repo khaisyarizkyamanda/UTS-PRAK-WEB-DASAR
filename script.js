@@ -135,7 +135,7 @@ function renderProducts(list) {
     card.className = "product-card reveal visible";
     card.innerHTML = `
       <div class="product-image">
-        <img src="${item.image}" alt="${item.name}">
+        <img src="${item.image || 'img/default.jpg'}" alt="${item.name}">
         <span class="product-badge">${item.badge}</span>
       </div>
       <div class="product-body">
@@ -409,13 +409,18 @@ function addProduct() {
     category,
     price: Number(price),
     badge: "New",
-    image,
+    image: "img/default.jpg", 
     description: "New product"
   };
 
   products.push(newItem);
-  renderProducts(products);
+
+  applyFilters(); 
   fillProductSelect();
+
+  document.getElementById("newName").value = "";
+  document.getElementById("newPrice").value = "";
+  document.getElementById("newCategory").value = "";
 }
 
 function deleteProduct(id) {
